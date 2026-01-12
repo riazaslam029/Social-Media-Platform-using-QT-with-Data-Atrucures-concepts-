@@ -1,0 +1,25 @@
+# Minimum Qt version required
+QT       += core gui widgets
+
+# Project type
+CONFIG   += c++17 console
+CONFIG   -= app_bundle   # for macOS only, optional
+
+# Project name
+TARGET = SocialMediaApp
+TEMPLATE = app
+
+# Input files
+SOURCES += main.cpp \
+           mainwindow.cpp
+
+HEADERS += mainwindow.h \
+           backend_social_media.h
+
+FORMS   += mainwindow.ui
+
+# Include paths (optional if header in same folder)
+INCLUDEPATH += .
+
+# Additional compiler options (optional)
+QMAKE_CXXFLAGS += -Wall -std=c++17
