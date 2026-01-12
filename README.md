@@ -170,13 +170,13 @@ This project demonstrates how theoretical DSA concepts solve real problems:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/riazaslam029/Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-.git
+   git clone https://github.com/riazaslam029/Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-. git
    cd Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-
    ```
 
 2. **Open in Qt Creator**
    ```
-   File → Open File or Project → Select .pro file
+   File → Open File or Project → Select . pro file
    ```
 
 3. **Configure Build**
@@ -291,7 +291,7 @@ Social-Media-Platform/
 │   ├── icons/                   # UI icons
 │   └── styles/                  # Qt stylesheets
 ├── docs/
-│   └── design.md                # Design documentation
+│   └── design. md                # Design documentation
 ├── tests/
 │   └── unit_tests.cpp           # Unit tests
 ├── project.pro                  # Qt project file
@@ -314,7 +314,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📝 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License.  See `LICENSE` for more information.
 
 ---
 
@@ -329,7 +329,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🙏 Acknowledgments
 
-- Course: Data Structures & Algorithms (3rd Semester)
+- Course:  Data Structures & Algorithms (3rd Semester)
 - Inspiration: Real-world social media platforms
 - Learning Resource: DSA textbooks and Qt documentation
 
