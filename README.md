@@ -1,344 +1,198 @@
 <div align="center">
 
-# 🌐 Social Media Platform
-### *Where Data Structures Meet Social Networking*
+# Social Media Platform in Qt
 
-[![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
-[![Qt](https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white)](https://www.qt.io/)
-[![DSA](https://img.shields.io/badge/DSA-FF6B6B?style=for-the-badge&logo=academia&logoColor=white)](https://github.com/riazaslam029/Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+### A data-structures-focused desktop social network built with C++ and Qt
 
-*A full-featured social media platform built from scratch to demonstrate real-world applications of Data Structures & Algorithms*
+[![C++](https://img.shields.io/badge/C%2B%2B-17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![Qt](https://img.shields.io/badge/Qt-5%2F6-41CD52?style=for-the-badge&logo=qt&logoColor=white)](https://www.qt.io/)
+[![CMake](https://img.shields.io/badge/CMake-3.16%2B-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](https://cmake.org/)
+[![License](https://img.shields.io/badge/License-MIT-F7DF1E?style=for-the-badge)](LICENSE)
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [DSA Implementation](#-dsa-in-action) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-system-architecture)
+<p>
+  <a href="#features">Features</a> •
+  <a href="#technology-stack">Technology</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#project-structure">Structure</a> •
+  <a href="#contributing">Contributing</a>
+</p>
 
 </div>
 
----
+## 📌 Overview
 
-## 📖 About The Project
+**Social Media Platform in Qt** is a third-semester Data Structures and Algorithms project that turns foundational DSA concepts into a desktop application. It combines a Qt graphical interface with custom C++ data structures and file-based persistence to model users, posts, interactions, and friend relationships.
 
-This isn't just another social media clone — it's a **learning-first, performance-optimized** system that proves DSA concepts aren't just theoretical exercises. Every feature is backed by carefully chosen data structures, implemented manually before optimization. 
-
-> **Philosophy**: Build it raw, understand it deeply, then optimize it intelligently.
-
-### 🎯 Project Goals
-
-- ✅ Implement core DSA concepts **from scratch** (no STL shortcuts for logic)
-- ✅ Apply algorithmic thinking to **real-world features**
-- ✅ Optimize using **advanced techniques** (Hashing, Time Complexity Analysis)
-- ✅ Create a **production-ready GUI** with Qt framework
-- ✅ Bridge the gap between **theory and practice**
-
----
+The project is intentionally educational: core structures are implemented and used directly so their behavior, trade-offs, and complexity remain visible in the application.
 
 ## ✨ Features
 
-### 👤 User Management
-- User registration and authentication
+### 👤 User management
+
+- User registration and login
 - Profile creation and customization
-- Friend request system
+- Friend requests with accept/reject flows
 
-### 📝 Post & Feed System
+### 📝 Posts and feed
+
 - Create, edit, and delete posts
-- Dynamic feed generation using BST
 - Timestamp-based post ordering
+- Binary-search-tree-backed feed organization
+- File-based persistence for application data
 
-### 💬 Social Interactions
-- **Likes** (Stack-based LIFO)
-- **Comments** (Queue-based FIFO)
-- Real-time interaction updates
+### 💬 Social interactions
 
-### 👥 Friend Network
-- Graph-based friend connections
-- **BFS-powered friend suggestions**
-- Network visualization
-- Mutual friends detection
+- Stack-based likes using LIFO behavior
+- Queue-based comments using FIFO behavior
+- Friend suggestions powered by graph traversal
+- Mutual-friend discovery and network visualization
 
-### 🔍 Search & Discovery
-- Hash-based user search
-- Optimized lookup operations
-- Intelligent recommendations
+### 🔎 Search and discovery
 
----
+- Hash-based user lookup
+- Optimized retrieval operations
+- Recommendations based on the social graph
 
-## 🧠 DSA in Action
+## 🧠 Data Structures in Action
 
-This project demonstrates how theoretical DSA concepts solve real problems: 
+| Data structure | Application of the concept |
+| --- | --- |
+| **Stack** | Like history and LIFO interaction behavior |
+| **Queue** | Comment ordering and FIFO processing |
+| **Binary Search Tree** | Feed organization and ordered retrieval |
+| **Graph** | Friend connections, BFS suggestions, and mutual friends |
+| **Hash Table** | Fast user search and lookup |
+| **Linked List** | Custom entity and collection management |
+| **Vector** | Qt-facing collection and rendering support |
 
-<table>
-<tr>
-<td width="50%">
+### Algorithms and techniques
 
-### 📚 Data Structures Used
+- Binary search tree insertion, deletion, search, and traversal
+- Breadth-first search for friend suggestions
+- Depth-first search for network analysis
+- Hash-based lookup with average constant-time access
+- Timestamp-based sorting with custom comparators
+- Time and space complexity analysis for key operations
 
-| Structure | Implementation | Use Case |
-|-----------|---------------|----------|
-| **Stack** | Manual (LIFO) | Like system |
-| **Queue** | Manual (FIFO) | Comment ordering |
-| **BST** | Custom Tree | Feed organization |
-| **Graph** | Adjacency List | Friend network |
-| **Hash Table** | Custom Hash | Search optimization |
-| **Linked List** | Manual | Data backbone |
-| **Vector** | STL (GUI only) | Qt rendering |
+## 🛠️ Technology Stack
 
-</td>
-<td width="50%">
+| Layer | Technology |
+| --- | --- |
+| Language | C++17 |
+| GUI | Qt Widgets (Qt 5 or Qt 6) |
+| Build systems | CMake and qmake |
+| Persistence | Plain-text file handling |
+| IDE | Qt Creator (recommended) |
+| Platforms | Windows, Linux, and macOS where Qt is available |
 
-### ⚡ Algorithms Applied
+## 🏗️ Architecture
 
-```cpp
-✓ Binary Search Tree Operations
-  - Insert, Delete, Search
-  - In-order Traversal (Feed)
+The application is organized into three logical layers:
 
-✓ Graph Algorithms
-  - BFS (Friend Suggestions)
-  - DFS (Network Analysis)
-  
-✓ Hashing Techniques
-  - User Lookup:  O(1)
-  - Post Retrieval: O(1)
-  
-✓ Sorting
-  - Timestamp-based ordering
-  - Custom comparators
+```text
+┌─────────────────────────────────────┐
+│ Qt Widgets / GUI                    │
+│ Main window • Login • Feed          │
+└──────────────────┬──────────────────┘
+                   │
+┌──────────────────▼──────────────────┐
+│ Application managers                │
+│ Users • Posts • Friends • Comments  │
+└──────────────────┬──────────────────┘
+                   │
+┌──────────────────▼──────────────────┐
+│ Custom data structures              │
+│ Stack • Queue • BST • Graph • Hash  │
+└──────────────────┬──────────────────┘
+                   │
+┌──────────────────▼──────────────────┐
+│ File-based persistence              │
+│ users.txt • posts.txt • friends.txt│
+└─────────────────────────────────────┘
 ```
 
-</td>
-</tr>
-</table>
-
----
-
-## 🛠 Tech Stack
-
-<div align="center">
-
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Backend** | C++ (Pure DSA) | Core logic & algorithms |
-| **Frontend** | Qt Framework | Cross-platform GUI |
-| **Build System** | qmake / CMake | Project compilation |
-| **IDE** | Qt Creator | Development environment |
-
-</div>
-
----
-
-## 🏗 System Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                     Qt GUI Layer                        │
-│              (Vectors for Rendering)                    │
-└─────────────────────┬───────────────────────────────────┘
-                      │
-┌─────────────────────▼───────────────────────────────────┐
-│                 Business Logic Layer                    │
-│  ┌──────────┐  ┌──────────┐  ┌────────────────────┐   │
-│  │  User    │  │  Post    │  │  Friend            │   │
-│  │  Manager │  │  Manager │  │  Manager           │   │
-│  └──────────┘  └──────────┘  └────────────────────┘   │
-└─────────────────────┬───────────────────────────────────┘
-                      │
-┌─────────────────────▼───────────────────────────────────┐
-│              Data Structure Layer                       │
-│  ┌─────┐  ┌─────┐  ┌─────┐  ┌───────┐  ┌──────────┐  │
-│  │Stack│  │Queue│  │ BST │  │ Graph │  │ HashTable│  │
-│  └─────┘  └─────┘  └─────┘  └───────┘  └──────────┘  │
-│     ▲        ▲        ▲         ▲           ▲         │
-│     └────────┴────────┴─────────┴───────────┘         │
-│              Custom Linked Lists                       │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🚀 Installation
+## 🚀 Getting Started
 
 ### Prerequisites
 
-```bash
-# Required
-- C++11 or higher compiler (GCC/MSVC/Clang)
-- Qt 5.12+ or Qt 6.x
-- Qt Creator (recommended) OR CMake
-```
+- A C++17-compatible compiler (GCC, Clang, or MSVC)
+- Qt 5 or Qt 6 with the Widgets module
+- CMake 3.16 or newer, or Qt Creator with qmake support
 
-### Build Steps
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/riazaslam029/Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-. git
-   cd Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-
-   ```
-
-2. **Open in Qt Creator**
-   ```
-   File → Open File or Project → Select . pro file
-   ```
-
-3. **Configure Build**
-   - Select appropriate kit (Desktop Qt version)
-   - Choose build configuration (Debug/Release)
-
-4. **Build & Run**
-   ```
-   Press Ctrl+R (or Cmd+R on Mac)
-   Or click the green "Run" button
-   ```
-
-### Alternative: Command Line Build
+### Option 1: Build with CMake
 
 ```bash
-# Using qmake
-qmake project.pro
-make
-./SocialMediaPlatform
-
-# Using CMake (if CMakeLists.txt exists)
-mkdir build && cd build
-cmake ..
-make
-./SocialMediaPlatform
+git clone https://github.com/riazaslam029/Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-.git
+cd Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-
+cmake -S . -B build
+cmake --build build
 ```
 
----
+Run the generated executable from the `build` directory. The exact executable name depends on the platform and generator.
 
-## 💻 Usage
+### Option 2: Open with Qt Creator
 
-### 1️⃣ Register/Login
-<p align="center">
-  <i>Create an account or login to your existing profile</i>
-</p>
+1. Open `CMakeLists.txt` or `SocialMediaApp.pro` in Qt Creator.
+2. Select a desktop kit with Qt Widgets installed.
+3. Choose a Debug or Release configuration.
+4. Build and run the project.
 
-### 2️⃣ Build Your Network
-- Send friend requests
-- Accept/reject incoming requests
-- View friend suggestions (powered by BFS)
+> **Note:** The application stores runtime data in text files. Run it from a location where it has permission to create or update those files.
 
-### 3️⃣ Share & Engage
-- Create posts with text content
-- Like posts (Stack-based system)
-- Comment on posts (Queue-based system)
+## 📂 Project Structure
 
-### 4️⃣ Explore the Feed
-- Browse your personalized feed (BST-organized)
-- Search for users (Hash-optimized)
-- Discover new connections
-
----
-
-## 📊 Performance Analysis
-
-### Time Complexity
-
-| Operation | Before Optimization | After Hashing | Improvement |
-|-----------|-------------------|---------------|-------------|
-| User Search | O(n) | O(1)* | ~100x faster |
-| Post Retrieval | O(log n) | O(1)* | Significant |
-| Friend Lookup | O(n) | O(1)* | Dramatic |
-| Feed Generation | O(n log n) | O(n log n) | Maintained |
-
-<sup>*Average case with good hash function</sup>
-
----
-
-## 🎓 Key Learning Outcomes
-
-### Technical Skills
-- ✅ Manual implementation of fundamental data structures
-- ✅ Algorithm design and optimization
-- ✅ Time/Space complexity analysis
-- ✅ Qt framework and GUI development
-- ✅ Object-oriented design patterns
-
-### Problem-Solving Approach
-1. **Understand** the problem deeply
-2. **Choose** appropriate data structures
-3. **Implement** from first principles
-4. **Analyze** performance bottlenecks
-5. **Optimize** intelligently
-
----
-
-## 🗂 Project Structure
-
-```
-Social-Media-Platform/
-├── src/
-│   ├── DataStructures/
-│   │   ├── Stack.h/cpp          # Manual Stack implementation
-│   │   ├── Queue.h/cpp          # Manual Queue implementation
-│   │   ├── BST.h/cpp            # Binary Search Tree
-│   │   ├── Graph.h/cpp          # Friend Network Graph
-│   │   ├── HashTable.h/cpp      # Custom Hash Table
-│   │   └── LinkedList.h/cpp     # Custom Linked List
-│   ├── Models/
-│   │   ├── User.h/cpp           # User entity
-│   │   ├── Post.h/cpp           # Post entity
-│   │   └── Comment.h/cpp        # Comment entity
-│   ├── Managers/
-│   │   ├── UserManager.h/cpp    # User operations
-│   │   ├── PostManager.h/cpp    # Post operations
-│   │   └── FriendManager.h/cpp  # Friend network ops
-│   └── GUI/
-│       ├── MainWindow.h/cpp     # Main interface
-│       ├── LoginDialog.h/cpp    # Authentication
-│       └── FeedWidget.h/cpp     # Feed display
-├── resources/
-│   ├── icons/                   # UI icons
-│   └── styles/                  # Qt stylesheets
-├── docs/
-│   └── design. md                # Design documentation
-├── tests/
-│   └── unit_tests.cpp           # Unit tests
-├── project.pro                  # Qt project file
-└── README.md                    # This file
+```text
+├── main.cpp                    # Application entry point
+├── mainwindow.*                # Main Qt window and UI
+├── backend_social_media.h      # Core application backend
+├── users.txt                   # User data
+├── posts.txt                   # Post data
+├── comments.txt                # Comment data
+├── friends.txt                 # Friend relationship data
+├── CMakeLists.txt              # CMake build configuration
+├── SocialMediaApp.pro          # qmake project configuration
+└── README.md
 ```
 
----
+The custom data-structure implementations and domain models are maintained in the project source files and headers at the repository root.
+
+## 📊 Performance Notes
+
+The following are the intended average-case characteristics of the main optimized operations:
+
+| Operation | Expected complexity |
+| --- | --- |
+| Hash-based user lookup | `O(1)` |
+| BST search | `O(log n)` for a balanced tree; `O(n)` worst case |
+| Graph traversal | `O(V + E)` |
+| Linked-list traversal | `O(n)` |
+| Feed ordering | Depends on the selected sorting strategy |
+
+These values describe algorithmic behavior and can vary with data distribution and implementation details.
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! 
+Contributions, issue reports, and improvement ideas are welcome.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the repository.
+2. Create a focused branch, such as `feature/improved-search`.
+3. Make and test your changes.
+4. Commit with a clear message.
+5. Open a pull request describing the change.
 
----
+Please keep contributions focused, document meaningful behavior changes, and preserve the project’s educational emphasis on explicit data-structure implementations.
 
-## 📝 License
+## 📄 License
 
-Distributed under the MIT License.  See `LICENSE` for more information.
-
----
+This project is distributed under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Riaz Aslam**
-
-- GitHub: [@riazaslam029](https://github.com/riazaslam029)
-- Project Link: [Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-](https://github.com/riazaslam029/Social-Media-Platform-using-QT-with-Data-Atrucures-concepts-)
-
----
-
-## 🙏 Acknowledgments
-
-- Course:  Data Structures & Algorithms (3rd Semester)
-- Inspiration: Real-world social media platforms
-- Learning Resource: DSA textbooks and Qt documentation
-
----
+**Riaz Aslam**  
+[GitHub: @riazaslam029](https://github.com/riazaslam029)
 
 <div align="center">
 
-### 🌟 If you found this project helpful, please consider giving it a star! 
-
-**Made with ❤️ and lots of ☕**
+If this project helped you learn Qt or data structures, consider giving it a ⭐.
 
 </div>
